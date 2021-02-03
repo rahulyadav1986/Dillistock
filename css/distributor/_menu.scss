@@ -6,8 +6,24 @@
         .slicknav_icon{
             width: 100%;
         }
-        .slicknav_icon-bar{ width: 60%; height: 3px; background: #fff;    display: block;
+        .slicknav_icon-bar{ width: 60%; height: 3px; background: #fff;    display: block; position: relative;
             margin: 0 auto 3px auto;
+        }
+        &.slicknav_open{
+            .slicknav_icon{
+                position: relative;
+                top: -2px;
+                left: 1px;
+            }
+            .slicknav_icon-bar{
+                transform: rotate(45deg); top: 5px;
+                &:nth-child(3){
+                    transform: rotate(-45deg); top: 1px;
+                }
+                &:nth-child(2){
+                    display: none;
+                }
+            } 
         }
         
        }

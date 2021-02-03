@@ -169,6 +169,12 @@ a:hover {
   width: 50%;
 }
 
+.default_body {
+  width: 100%;
+  float: left;
+  padding: 7rem 0;
+}
+
 @media only screen and (max-width: 1200px) {
   html {
     font-size: 55%;
@@ -240,7 +246,30 @@ a:hover {
   height: 3px;
   background: #fff;
   display: block;
+  position: relative;
   margin: 0 auto 3px auto;
+}
+
+.slicknav_menu .slicknav_btn.slicknav_open .slicknav_icon {
+  position: relative;
+  top: -2px;
+  left: 1px;
+}
+
+.slicknav_menu .slicknav_btn.slicknav_open .slicknav_icon-bar {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 5px;
+}
+
+.slicknav_menu .slicknav_btn.slicknav_open .slicknav_icon-bar:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 1px;
+}
+
+.slicknav_menu .slicknav_btn.slicknav_open .slicknav_icon-bar:nth-child(2) {
+  display: none;
 }
 
 .slicknav_menu .slicknav_nav ul, .slicknav_menu .slicknav_nav li, .slicknav_menu .slicknav_nav a {
@@ -645,9 +674,87 @@ header .right_details .right_widget .details li:first-child a::after {
   background-repeat: no-repeat;
 }
 
+.inner_hero_back {
+  width: 100%;
+  height: 33.6rem;
+  float: left;
+  position: relative;
+  margin-top: 10rem;
+  padding-top: 12.6rem;
+}
+
+.inner_hero_back .ovarlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.inner_hero_back img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.inner_hero_back .container {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+}
+
+.inner_hero_back .container h1 {
+  color: #fff;
+  font-size: 5rem;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.inner_hero_back .container .bedcrumb {
+  position: absolute;
+  bottom: 2rem;
+  right: 0;
+}
+
+.inner_hero_back .container .bedcrumb li {
+  color: #fff;
+  float: left;
+  font-size: 3rem;
+}
+
+.inner_hero_back .container .bedcrumb li a {
+  color: #a7958b;
+}
+
+@media only screen and (max-width: 1200px) {
+  .inner_hero_back .container .bedcrumb {
+    right: 15px;
+  }
+}
+
 @media only screen and (max-width: 1023px) {
   .hero_back .container h1 {
     font-size: 3.7rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .inner_hero_back {
+    text-align: center;
+  }
+  .inner_hero_back .container h1 {
+    margin-bottom: 4rem;
+  }
+  .inner_hero_back .container .bedcrumb {
+    position: relative;
+    display: inline-block;
+    right: 0;
   }
 }
 
@@ -733,6 +840,18 @@ header .right_details .right_widget .details li:first-child a::after {
   border: #291402 4px solid;
   content: "";
   z-index: -1;
+}
+
+.home_about_us_back.about_us .left_content {
+  margin-bottom: 2rem;
+}
+
+.home_about_us_back.about_us .left_content h2 {
+  font-size: 4rem;
+}
+
+.home_about_us_back.about_us .image_back {
+  padding: 0;
 }
 
 @media only screen and (max-width: 768px) {
@@ -1205,6 +1324,418 @@ header .right_details .right_widget .details li:first-child a::after {
 }
 
 /*bottom sign up*/
+/*FAQ*/
+.accordion.custom {
+  width: 100%;
+  float: left;
+  margin-top: 3rem;
+}
+
+.accordion.custom .card {
+  margin-bottom: 1.6rem;
+  border: none;
+  border-bottom: #9d9d9d 1px dashed;
+}
+
+.accordion.custom .card .card-header {
+  border-bottom: #9d9d9d 1px dashed;
+  background-color: #fff;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 1rem 0 2.7rem 6rem;
+  position: relative;
+  color: #222222;
+  font-size: 1.8rem;
+  text-decoration: none;
+  outline-style: none;
+}
+
+.accordion.custom .card .card-header.collapsed .fa {
+  background-color: #0088cc;
+}
+
+.accordion.custom .card .card-header .fa {
+  width: 4.4rem;
+  height: 4.7rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #c1c1c1;
+  color: #fff;
+  content: "";
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.accordion.custom .card .card-header .fa::before {
+  content: "";
+}
+
+.accordion.custom .card .card-header .fa.fa-plus {
+  background-image: url(../images/plus.png);
+}
+
+.accordion.custom .card .card-header .fa.fa-minus {
+  background-image: url(../images/minus.png);
+}
+
+.accordion.custom .card .card-body {
+  padding: 3rem;
+  color: #606060;
+  font-size: 1.8rem;
+}
+
+/*FAQ*/
+/*Blog*/
+.blog_left_details {
+  width: 100%;
+  float: left;
+}
+
+.blog_left_details .content_back {
+  width: 100%;
+  float: left;
+}
+
+.blog_left_details .avator_part {
+  width: 100%;
+  float: left;
+}
+
+.blog_left_details .avator_part img {
+  width: 100%;
+  display: block;
+}
+
+.blog_left_details .avator_part .widget_area {
+  width: 100%;
+  float: left;
+  padding-top: 6rem;
+  margin-bottom: 5rem;
+}
+
+.blog_left_details .avator_part .widget_area .widget {
+  width: 100%;
+  float: left;
+}
+
+.blog_left_details .avator_part .widget_area .widget li {
+  color: #717171;
+  float: left;
+  font-size: 2.4rem;
+  margin-right: 3.5rem;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.blog_left_details .avator_part .widget_area .widget li::before {
+  width: 1rem;
+  height: 1rem;
+  background-color: #0088cc;
+  border-radius: 2rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  content: "";
+}
+
+.blog_left_details .avator_part .widget_area .widget li:first-child {
+  padding-left: 5rem;
+}
+
+.blog_left_details .avator_part .widget_area .widget li:first-child::before {
+  display: none;
+}
+
+.blog_left_details .avator_part .widget_area .widget li img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 4.1rem;
+  height: 4.1rem;
+}
+
+.blog_left_details .avator_part h3 {
+  color: #000;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.blog_left_details .content_area {
+  width: 100%;
+  float: left;
+  margin-bottom: 3rem;
+}
+
+.blog_left_details .content_area p {
+  color: #000;
+  font-size: 2.4rem;
+  line-height: 5rem;
+}
+
+.blog_left_details .content_area img {
+  width: 100%;
+  display: block;
+  margin: 3rem 0 4rem;
+}
+
+.blog_left_details .content_area h4 {
+  color: #000;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.related_post {
+  width: 100%;
+  float: left;
+  margin-bottom: 4rem;
+}
+
+.related_post h4 {
+  color: #000;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.related_post .main {
+  width: 100%;
+  float: left;
+  margin-top: 4rem;
+}
+
+.related_post img {
+  width: 100%;
+  height: 17.8rem;
+  margin-bottom: 3rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.comment_area {
+  width: 100%;
+  float: left;
+  margin-bottom: 4rem;
+}
+
+.comment_area h4 {
+  color: #000;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.comment_area .main {
+  width: 100%;
+  float: left;
+  margin-top: 4rem;
+}
+
+.comment_area .main .portion {
+  width: 100%;
+  float: left;
+  margin-bottom: 3rem;
+}
+
+.comment_area .main .portion .input {
+  width: 100%;
+  height: 8.5rem;
+  padding: 0 2rem;
+  outline-style: none;
+  border: #787878 2px solid;
+  color: #545454;
+  font-size: 1.9rem;
+}
+
+.comment_area .main .submit {
+  width: 100%;
+  height: 8rem;
+  background-color: #291402;
+  display: inline-block;
+  font-size: 3rem;
+  color: #fff;
+  text-decoration: none;
+  outline-style: none;
+  line-height: 8rem;
+  border-radius: .5rem;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  outline-style: none;
+}
+
+.comment_area .main .submit:hover {
+  background-color: #7f6657;
+}
+
+@media only screen and (max-width: 500px) {
+  .blog_left_details .avator_part .widget_area .widget li {
+    font-size: 2rem;
+  }
+}
+
+/*Blog*/
+/*Contact*/
+.contact_heading {
+  width: 100%;
+  float: left;
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.contact_heading h3 {
+  font-size: 3rem;
+  color: #000;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+}
+
+.contact_heading h2 {
+  font-size: 4rem;
+  color: #291402;
+  text-transform: uppercase;
+}
+
+.contact_details {
+  width: 100%;
+  float: left;
+}
+
+.contact_details .portion {
+  width: 100%;
+  height: 31.9rem;
+  background-color: #fff;
+  border: #291402 1px solid;
+  padding: 2.6rem 3.3rem 0 3.3rem;
+  margin-bottom: 3rem;
+}
+
+.contact_details .portion .image_back {
+  width: 100%;
+  display: block;
+  min-height: 7.7rem;
+  margin-bottom: 2.4rem;
+}
+
+.contact_details .portion .image_back img {
+  display: inline-block;
+}
+
+.contact_details .portion h2 {
+  font-size: 3rem;
+  color: #291402;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+
+.contact_details .portion p {
+  font-size: 2.8rem;
+  color: #757575;
+  line-height: 4.8rem;
+}
+
+@media only screen and (max-width: 1023px) {
+  .contact_details .portion {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .contact_details .portion {
+    text-align: center;
+    height: auto;
+    padding-bottom: 2.6rem;
+  }
+  .contact_details .portion .image_back {
+    min-height: 1px;
+  }
+  .contact_details .portion .image_back img {
+    height: 6rem;
+  }
+}
+
+.message_back {
+  width: 100%;
+  float: left;
+  margin-top: 10rem;
+}
+
+.message_back h2 {
+  font-size: 4rem;
+  color: #291402;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.message_back .contact_form_back {
+  width: 100%;
+  float: left;
+}
+
+.message_back .contact_form_back .portion {
+  width: 100%;
+  float: left;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.message_back .contact_form_back .portion .input {
+  width: 100%;
+  height: 6.9rem;
+  background-color: #f9f9f9;
+  border: #291402 1px solid;
+  outline-style: none;
+  padding: 0 2rem;
+  text-align: left;
+  font-size: 1.5rem;
+}
+
+.message_back .contact_form_back .portion .input.textarea {
+  height: 19.9rem;
+  padding: 2rem;
+  resize: none;
+}
+
+.message_back .contact_form_back .portion .submit {
+  width: 50rem;
+  height: 8rem;
+  background-color: #291402;
+  display: inline-block;
+  font-size: 3rem;
+  color: #fff;
+  text-decoration: none;
+  outline-style: none;
+  line-height: 8rem;
+  border-radius: .5rem;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  outline-style: none;
+}
+
+.message_back .contact_form_back .portion .submit:hover {
+  background-color: #7f6657;
+}
+
+/*Contact*/
 /*footer*/
 footer {
   width: 100%;

@@ -22,6 +22,17 @@
             width: 28.9rem; height: 100%; position: absolute; top: 0; right: 0; border: #291402 4px solid; content: ""; z-index: -1;
         }
     }
+    &.about_us{
+        .left_content{
+            margin-bottom: 2rem;
+            h2{
+                font-size: 4rem;
+            }
+        }
+        .image_back{
+            padding: 0;
+        }
+    }
 }
 
 
