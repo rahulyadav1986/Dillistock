@@ -38,6 +38,12 @@
         width: 100%; float: left; margin-bottom: 3rem;
         p{
             color: #000; font-size: 2.4rem; line-height: 5rem;
+            &.big{
+                &::first-letter{
+                    font-size: 5.4rem;
+                }
+            }
+            
         }
         img{
             width: 100%; display: block; margin: 3rem 0 4rem;
@@ -84,6 +90,51 @@
         }
     }
     
+}
+
+.widget_right{
+    width: 100%; float: left; margin-bottom: 7.5rem;
+    h3{
+        font-size: 30px; text-transform: capitalize; padding-bottom: 1rem; position: relative; margin-bottom: 2rem; width: 100%;
+        &::after{
+            width: 13.7rem; height: 2px; position: absolute; bottom: 0; left: 0; background-color: #0088cc; content: "";
+        }
+    }
+    .details{
+        width: 100%; float: left;
+        li{
+            width: 100%; float: left; padding-left: 15.4rem; position: relative; min-height: 11.6rem; padding-top: 2rem; margin-bottom: 3rem;
+            a{
+                color: #777777; font-size: 20px; text-transform: capitalize;
+            }
+            img{
+                width: 14.3rem; height: 100%; position: absolute; top: 0; left: 0;
+            }
+        }
+
+    }
+    &.cat{
+        .details{
+            li{
+                padding-left: 0; min-height: 1px; margin-bottom: 1rem;
+                a{
+                    color: #000;
+                }
+            }
+        }
+        
+    }
+    &.tags{
+        .details{            
+            li{
+                 padding: .5rem 2rem;  background-color: #000; margin-right: 1rem; border-radius: 5px; float: left; width: auto; 
+                a{
+                    color: #fff; font-size: 18px; text-transform: none; float: left;
+                }
+            }
+        }
+        
+    }
 }
 
 @media only screen and (max-width:500px){
